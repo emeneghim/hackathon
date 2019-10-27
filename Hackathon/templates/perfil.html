@@ -1,0 +1,14 @@
+{%extends "modelo.html"%}
+
+{% block conteudo %}
+{%for usuario in lista%}
+{%if id_usuario == usuario.nome%}
+<p>Nome: {{id_usuario}}</p>
+<p>CPF: {{usuario.cpf}}</p>
+<p>Telefone: {{usuario.telefone}}</p>
+{%endif%}
+{%endfor%}
+<br><br>
+
+
+{% endblock %}

@@ -1,0 +1,70 @@
+{%extends "modelo.html"%} {%block conteudo%}
+	<div class="forms">
+        <h3>{{title}}</h3>
+        <form action="/cadastro_veiculo", method="POST">
+            <table>
+            <tr>
+                <td>
+                    <p>Marca:</p>
+                </td>
+                <td>
+                    <input type="text" name="marca" placeholder="Marca do Veículo" autofocus required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Modelo:</p>
+                </td>
+                <td>
+                    <input type="text" name="modelo" placeholder="Modelo do Veículo" autofocus required>
+                </td>
+            </tr>
+            <tr>
+                 <td>
+                    <p>Cor:</p>
+                </td>
+                <td>
+                    <input type="color" name="cor">
+                </td>
+            </tr>
+            <tr>
+                 <td>
+                    <p>Placa:</p>
+                </td>
+                <td>
+                    <input type="text" name="placa" placeholder="Placa do Veículo" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Ano:</p>
+                </td>
+                <td>
+                    <input type="number" name="ano" placeholder="Ano do Veículo">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Foto do veículo:</p>
+                </td>
+                <td>
+                    <input type="file" name="foto" accept="imagem/*">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Descrição:</p>
+                </td>
+                <td>
+                    <textarea name="descricao" style="width: 400px; height: 50px" placeholder="Descreva aqui os detalhes do seu carro que podem ajudar nas buscas, exempo: Algum amassado, uma calota faltando, cor das calotas, se o carro é rebaixado, etc."></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Concluir">
+                </td>
+            </tr>
+            </table>
+        </form>
+	</div>
+{%endblock%}

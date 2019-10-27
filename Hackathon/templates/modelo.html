@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+        <meta charset="utf-8">
+        <link id=estilo rel=stylesheet href=/static/css/global.css />
+        <title>{{title}}</title>
+	</head>
+	<body>
+		
+		<div class="container">
+			<header class="flex align-center">
+                {%if session['usuario']%}
+                    <h2>Você está logado no TrackSoft, {{session['usuario']}}!</h2>
+                {%else%}
+                    <h2>TrackSoft</h2>
+				{%endif%}
+				
+				<div class="flex align-center">
+
+					{%if session['usuario']%}
+                    	<a href="/form_cadastro_veiculo" class="circle" style="border-color: transparent;">Cadastrar Veículo</a>
+						<a href="/form_cadastro_camera" class="circle" style="border-color: transparent;">Cadastrar Câmera</a>
+						<a href="/perfil" class="circle" style="border-color: transparent;">Perfil</a>
+						<a href="/logout" class="circle" style="border-color: transparent;">Logout</a>
+					{%else%}
+						<a href="/form_cadastro_usuario" class="circle" style="border-color: transparent;">Sign Up</a>
+						<a href="/form_login" class="circle">Login</a>
+					{%endif%}
+				</div>
+			</header>
+			<div class = "content">		
+			
+			{%block conteudo%}{%endblock%}
+		</div> 
+		<footer class="footer">
+				<span>Developed on Hackathon 2019.</span>
+			</footer>
+	</body>
+</html>

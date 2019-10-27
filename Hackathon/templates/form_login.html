@@ -1,0 +1,23 @@
+{%extends "modelo.html"%} {%block conteudo%}
+	<div class="forms">
+        <form action="/login" method="POST">
+            <table>
+            <tr>
+                 <td>
+                    <input type="number" name="CPF" placeholder="CPF:"  autofocus>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="password" name="senha" placeholder="Senha:">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Concluir">
+                </td>
+            </tr>
+            </table>
+        </form>
+	</div>
+{%endblock%}

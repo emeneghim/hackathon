@@ -1,0 +1,45 @@
+{%extends "modelo.html"%} {%block conteudo%}
+	<div class="forms">
+        <h3>{{title}}</h3>
+        <form action="/cadastro_usuario" method="POST">
+            <table>
+            <tr>
+                <td>
+                    <input type="text" name="nome" placeholder="Nome"  autofocus>
+                </td>
+            </tr>
+            <tr>
+                 <td>
+                    <input type="number" name="CPF" placeholder="CPF">
+                </td>
+            </tr>
+            <tr>
+                    <td>
+                       <input type="number" name="telefone" placeholder="Telefone">
+                   </td>
+               </tr>
+            <tr>
+                <td>
+                    <input type="password" name="senha1" placeholder="Senha">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="password" name="senha2" placeholder="Confirmar senha">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="file" name="foto" accept="imagem/*">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Concluir">
+                </td>
+            </tr>
+            
+            </table>
+        </form>
+	</div>
+{%endblock%}
